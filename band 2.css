@@ -1,0 +1,424 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato",serif;
+}
+
+html{
+    width: 100%;
+    scroll-behavior: smooth;
+    font-family:'Times New Roman', Times, serif
+}
+
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after{
+    content:"";
+    display: block;
+    clear: both;
+}
+
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-third{
+    width: 33%;
+}
+
+.col-half{
+    width:50%;
+}
+
+.col-full{
+    width:100%;
+}
+
+.mt-8{
+    margin-top: 8px!important;
+}
+
+.mt-16{
+    margin-top: 16px!important;
+}
+
+#header{
+    z-index: 1;
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 46px;
+    background-color: black;
+}
+
+/* Nav */
+#nav{
+    display: inline-block;
+}
+
+#nav li{
+    display: inline-block;
+    position: relative;
+}
+
+#nav li:hover .subnav{
+    display: block;
+    background: white;
+    padding: 0;
+    left: 0;
+}
+
+#nav > li > a{
+    color: white;
+}
+
+#nav li a{
+    color:white;
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px
+}
+
+#nav > li:hover > a{
+    cursor: pointer;
+    color:black;
+    background-color:gray;
+    display: inline-block;
+}
+
+/* subnav */
+#nav .subnav{
+    display: none;
+    position: absolute;
+    right: -30px;
+}
+/* width =100% hoặc display block */
+#nav .subnav li:hover{
+    color:black;
+    background-color:gray;
+    width: 100%;
+}
+
+#nav .subnav a{
+    color:black;
+    list-style-type: none;
+    min-width: 160px;
+}
+
+/* search btn */
+#header .search-btn {
+    float: right;
+}
+
+#header .search-icon {
+    color: white;
+    line-height: 46px;
+    padding: 0 24px;
+}
+
+#header .search-btn:hover{
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
+/* search-menu */
+#header .search-menu-btn {
+    float: right;
+}
+
+#header .menu-icon {
+    color: white;
+    line-height: 46px;
+    padding: 0 24px;
+    display: none;
+}
+
+#header .search-menu-btn:hover{
+    background-color: gray;
+    cursor: pointer;
+}
+
+/* slider */
+#slider{
+    position: relative;
+    margin-top: 46px;
+    width: 100%;
+}
+
+/* có thể dùng nhiều cách
+cách 1 như bên dưới
+cách 2 witdh: 100%; và kết húc ở dòng 110 là đc
+cách 3 thủ công right và left = 0; */
+#slider .text-content {
+    position: absolute;
+    color:white;
+    bottom: 0;
+    width: 100%;
+    padding: 32px 16px;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#slider .text-heading {
+    font-weight: 500;
+    font-size: 24px;
+}
+
+#slider .text-descriptions {
+    font-size: 15px;
+    margin-top: 35px;
+}
+/* content */
+/* header the band tour dates contacts */
+#content .content-section{
+    width:800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 16px 112px;
+}
+#content .section-heading{
+    font-size:30px;
+    font-weight:bold;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+#content .section-sub-heading{
+    font-size: 20px;
+    text-align: center;
+    font-style: italic;
+    opacity: 0.4;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+#content .section-text {
+    font-size:18px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+/* member */
+
+#content .member-list {
+    margin-top: 48px;
+    overflow: hidden;
+}
+
+#content .member-item {
+    float: left;
+    text-align: center;
+}
+
+#content .member-name {
+    font-size: 16px;
+}
+
+#content .member-img{
+    margin-top:15px;
+    width: 60%;
+    border-radius: 4px;
+}
+
+.clear{
+    clear: both;
+}
+
+/* tour */
+
+.tour-section{
+    background-color: black;
+}
+
+.ticket-list{
+    background-color:white;
+    margin-top: 40px;
+    list-style: none;
+}
+.ticket-list li{
+    color:#757575;
+    font-size: 15px;
+    padding: 12px 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.ticket-list .sold-out{
+    background-color:red;
+    color: white;
+    padding: 3px 4px;
+    margin-left: 10px;
+}
+
+.ticket-list .quantity{
+    float: right;
+    background-color:black;
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+}
+
+.text-white{
+    color: white !important;
+}
+
+/* place */
+
+.place-list{
+    margin-top: 32px;
+    margin-left: -8px;
+    margin-right: -16px;
+}
+
+.place-item{
+    float: left;
+    width: 33%;
+    padding: 0 8px;
+}
+
+.place-img{
+    width:100%;
+    display: block;
+}
+
+.place-img:hover{
+    opacity: 0.6;
+}
+
+.place-body{
+    background-color:white;
+    padding: 16px;
+    font-size: 16px;
+}
+
+.place-heading{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.place-time{
+    margin-top: 15px;
+    opacity: 0.7;
+    color: #757575;
+    line-height: 1.4;
+}
+
+.place-des{
+    margin-top: 15px;
+}
+
+.place-buy{
+    background-color: black;
+    color: white;
+    padding: 4px 16px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.place-buy:hover{
+    color:black;
+    background-color:gray;
+    cursor: pointer;
+}
+
+/* contact */
+
+.contact-content {
+    margin-top: 46px;
+}
+
+.contact-info {
+    font-size: 18px;
+    line-height:1.5;
+}
+
+/* có thể viết .contact-info i[class*="fa-"]
+fa- có thể thay thế bằng cái khác ( ví dụ icon ) */
+.contact-info i{
+    width: 30px;
+    display: inline-block;
+    color: black;
+    font-weight: bold;
+}
+
+.contact-form{
+    font-size:15px;
+}
+
+.contact-form .form-control{
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.contact-form .btn-send{
+    font-size:15px;
+    background-color:black;
+    color:white;
+    border: 1px solid #000;
+    padding: 10px 16px;
+    float: right;
+    border: none;
+}
+
+/* map */
+
+.map-section img {
+    width: 100%;
+}
+
+/* footer section */
+#footer{
+    padding: 64px 16px;
+    text-align: center;
+}
+
+#footer .social-list{
+    font-size:24px;
+}
+
+#footer .social-list a{
+    color: #757575;
+    text-decoration: none;
+}
+
+#footer .coppy-right{
+    margin-top: 15px;
+    color: #757575;
+}
+
+#footer .coppy-right a{
+    color: #757575;
+}
+
+#footer .coppy-right a:hover,
+#footer .social-list a:hover{
+    color: rgba(0,0,0,0.3);
+}
+
+
+
+/* Responsive */
+
+/* mobile */
+@media screen and (max-width: 760px){
+    .pc{
+        display: none;
+    }
+    #header .search-btn{
+        display: none;
+    }
+    #header .menu-icon{
+        display: block !important;
+    }
+}
